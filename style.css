@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Hanken+Grotesk:wght@500;700;800&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&family=Overpass:wght@400;700&family=Play:wght@700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Saira+Condensed:wght@100&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --Light_red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off_white: hsl(0, 0%, 94%);
+    --Light_grey: hsl(0, 0%, 86%);
+    --Smokey_grey: hsl(0, 1%, 44%);
+    --Off_black: hsl(0, 0%, 8%);
+}
+
+.page-body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--Light_grey);
+    font-family: "Poppins";
+    font-size: 32px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 600px;
+    min-height: 450px;
+    background-color: var(--White);
+    border-radius: 1.2rem 1.2rem 10rem 1.2rem;
+    padding: 2.5rem;
+    position: relative;
+    margin: 1.5rem;
+}
+
+.input-date{
+    display: flex;
+    justify-content: left;
+    gap: 1.2rem;
+    padding-bottom: 2.2rem;
+    border-bottom: 1px solid var(--Light_grey);
+    margin-bottom: -1.9rem;
+}
+
+.align-vertically p{
+    font-size: 0.3em;
+    color: var(--Smokey_grey);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.align-vertically{
+    display: flex;
+    flex-direction: column;
+}
+
+.error-message{
+    margin-top: 0.4rem;
+    color: var(--Light_red);
+    font-style: italic;
+    font-size: 0.65rem;
+}
+
+input[type = number]{
+    color: var(--Off_black);
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    width: 7rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--Light_grey);
+    margin-top: 0.4rem;
+    font-size: 1.5rem;
+    font-family: inherit;
+    outline: none;
+}
+
+input[type = number]::placeholder{
+    opacity: 0.5;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input.text-input:focus {
+    border: 1px solid var(--Purple);
+}
+
+button.submit{
+    /* position: absolute; */
+    /* top: 9em;
+    right: 3em; */
+    background-color: var(--Purple);
+    padding: 0.85rem 1rem;
+    border-radius: 50%;
+    border: none;
+    margin-left:89%;
+}
+
+button.submit img{
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.final-result{
+    display: flex;
+    flex-direction: column;
+}
+
+.final-result h1{
+    font-style: italic;
+    font-size: 2.2em;
+    line-height: 1.2;
+    color: var(--Off_black);
+}
+
+h1 span{
+    color: var(--Purple);
+    letter-spacing: 5px;
+}
+
+button.submit:hover{
+    background-color: var(--Off_black);
+    cursor: pointer;
+}
+
+@media (max-width: 550px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 3rem 1.5rem;
+        border-radius: 1.3rem 1.3rem 7rem 1.3rem;
+    }
+    button.submit{
+        margin: 0 auto;
+        padding: 1.2rem 1.4rem;
+    }
+    .input-date{
+        margin-bottom: -5rem;
+        padding-bottom: 4rem;
+        font-size: 3rem;
+        gap: 0.3rem;
+    }
+
+    input[type = number]{
+        width: 90%;
+        padding: 0.65rem 0.75rem;
+        border-radius: 0.5rem;
+    }
+    .final-result{
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width : 420px){
+    .final-result{
+        font-size: 1.3rem;
+    }
+    input[type = number]{
+        font-size: 1.3rem;
+    }
+    input[type = number]::placeholder{
+        opacity: 0.5;
+        font-size: 1.3rem;
+    }
+}
